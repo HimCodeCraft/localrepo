@@ -106,6 +106,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Attach the validation function to the form's submit event
     document.getElementById('myForm').onsubmit = function(event) {
+        if (!debug) return true;  //Disable js validation (debug is in header.inc)
+
         if (!validateEnquiryForm()) {
             event.preventDefault(); // Prevent form submission if validation fails
         } else {

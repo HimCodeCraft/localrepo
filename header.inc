@@ -25,3 +25,6 @@
         </ul>
     </nav>
 </header>
+<script>
+var debug = false; // Set to false to disable JS validation, true to enable it
+</script>

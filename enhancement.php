@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>4K Beast - The Ultimate 4K Experience</title>
@@ -8,7 +8,7 @@
     <meta name="keywords" content="4K TV, Ultra HD, Smart TV, LED TV, 4K Beast">
     <meta name="author" content="Taniksha Dabral">
 </head>
-<body>
+<body> -->
 <?php include('header.inc'); ?>
 <main id="OuterBoxes">
     <h1>4K Fun Area</h1>
@@ -54,7 +54,7 @@
 
 </main>
 
-<?php include('footer.inc'); ?>
 <script src="scripts/enhancement.js"></script>
-</body>
-</html>
+<?php include('footer.inc'); ?>
+<!-- </body>
+</html> -->

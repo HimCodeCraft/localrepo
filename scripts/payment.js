@@ -8,25 +8,28 @@
 'use strict';
 document.addEventListener('DOMContentLoaded', function () {
     // Show the stored form data from localStorage, mate
-    var storedData = localStorage.getItem('enquiryFormData');
-    if (storedData) {
-        var formData = JSON.parse(storedData);
-        document.getElementById('firstnameDisplay').textContent = formData.firstname; // Depict first name
-        document.getElementById('lastnameDisplay').textContent = formData.lastname; // Depict last name
-        document.getElementById('emailDisplay').textContent = formData.email; // Show email
-        document.getElementById('streetDisplay').textContent = formData.street; // Depictstreet address
-        document.getElementById('suburbDisplay').textContent = formData.suburb; // Depict suburb
-        document.getElementById('stateDisplay').textContent = formData.state; // Depict state
-        document.getElementById('postcodeDisplay').textContent = formData.postcode; // Show postcode
-        document.getElementById('phoneDisplay').textContent = formData.phone; // Show phone number
-        document.getElementById('contactMethodDisplay').textContent = formData.contactMethod; // Depict contact method
-        document.getElementById('productDisplay').textContent = formData.product; // Show product
-        document.getElementById('quantityDisplay').textContent = formData.quantity; // Show quantity
-        document.getElementById('totalAmountDisplay').textContent = formData.totalAmount; // Show total amount
+    if (debug) {
+        var storedData = localStorage.getItem('enquiryFormData');
+        if (storedData) {
+            var formData = JSON.parse(storedData);
+            document.getElementById('firstnameDisplay').textContent = formData.firstname; // Depict first name
+            document.getElementById('lastnameDisplay').textContent = formData.lastname; // Depict last name
+            document.getElementById('emailDisplay').textContent = formData.email; // Show email
+            document.getElementById('streetDisplay').textContent = formData.street; // Depictstreet address
+            document.getElementById('suburbDisplay').textContent = formData.suburb; // Depict suburb
+            document.getElementById('stateDisplay').textContent = formData.state; // Depict state
+            document.getElementById('postcodeDisplay').textContent = formData.postcode; // Show postcode
+            document.getElementById('phoneDisplay').textContent = formData.phone; // Show phone number
+            document.getElementById('contactMethodDisplay').textContent = formData.contactMethod; // Depict contact method
+            document.getElementById('productDisplay').textContent = formData.product; // Show product
+            document.getElementById('quantityDisplay').textContent = formData.quantity; // Show quantity
+            document.getElementById('totalAmountDisplay').textContent = formData.totalAmount; // Show total amount
+        }
     }
 
     // Set up the submit event listener for the payment form, righto
     document.getElementById('paymentForm').addEventListener('submit', function (event) {
+        if (!debug) return true;  //Disable js validation (debug is in header.inc)
         var errorMessages = validateCreditCard(); // Run the credit card validation, no worries
         var errorContainer = document.getElementById('errorMessages');
         errorContainer.innerHTML = ''; // Clear any old error messages, mate

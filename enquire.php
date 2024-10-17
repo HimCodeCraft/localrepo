@@ -147,34 +147,6 @@ function show_value($array , $key,$defValue=''){
 }
 ?>
 
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>4K Beast - Product Enquiry</title>
-    <link rel="stylesheet" href="style.css">
-    <meta charset="UTF-8">
-    <meta name="description" content="Submit an enquiry for your desired 4K Ultra HD TV.">
-    <meta name="keywords" content="4K TV, Ultra HD, Smart TV, LED TV, Product Enquiry, 4K Beast">
-    <meta name="author" content="Taniksha Dabral">
-    
-</head>
-
-<body>
-<header>
-    <nav class="NavBar">
-        <a href="index.html" class="logo">
-            <img src="images/4Klogo.png" alt="4K Beast Logo">
-        </a>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="product.html">Products</a></li>
-            <li><a href="enquire.html">Enquire</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="payment.html">Payement</a></li>
-            <li><a href="enhancement.html">Enhancements</a></li>
-        </ul>
-    </nav>
-</header> -->
 <?php include('./header.inc');
  ?>
 
@@ -324,7 +296,7 @@ function show_value($array , $key,$defValue=''){
                 <label for="comments">Comments:</label>
                 <textarea id="comments" name="comments" placeholder="Any specific requirement you are interested in"></textarea>
             </div>
-            <div id="errorMessages" style="color: #c50000;">
+            <div id="errorMessages" >
                 <?php if(!empty($errors)){
                     foreach($errors as $err){
                         echo $err;
@@ -341,5 +313,3 @@ function show_value($array , $key,$defValue=''){
 <br><br>
 <script src="scripts/enquire.js"></script>
 <?php include('footer.inc'); ?>
-<!-- </body>
-</html> -->

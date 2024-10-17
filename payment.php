@@ -49,7 +49,7 @@ function sanitizeInput($array, $key, $defValue = '')
     <!-- Credit card payment details form -->
     <!-- <form id="paymentForm" action="https://mercury.swin.edu.au/it000000/formtest.php" method="post" novalidate="novalidate"> -->
     <form id="paymentForm" action="process_order.php" method="post" novalidate="novalidate">
-        <div id="errorMessages" style="color: red;">
+        <div id="errorMessages">
             <?php
             if (!empty($errors)) {
                 foreach ($errors as $error) {
